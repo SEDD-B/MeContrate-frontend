@@ -1,14 +1,15 @@
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { Provider } from './shared/components/ui/provider';
 import { AuthProvider } from './shared/context/AuthContext';
 import App from './app/App.tsx';
 
-const root = document.getElementById("root");
-
-createRoot(root!).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider>
     <AuthProvider>
-      <App />
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
     </AuthProvider>
   </Provider>
-);
+)
