@@ -5,27 +5,16 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-    strictPort: true,
     host: true,
-    hmr: {
-      overlay: true
+    headers: {
+      'Content-Type': 'application/javascript'
     }
   },
   build: {
-    outDir: 'dist',
-    sourcemap: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom']
-        }
+        manualChunks: undefined
       }
-    }
-  },
-  resolve: {
-    alias: {
-      '@': '/src'
     }
   }
 })
