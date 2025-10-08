@@ -5,7 +5,6 @@ import { useAuth } from "../shared/context/AuthContext";
 import Home from "../pages/Home";
 import Dashboard from "../pages/Dashboard";
 import Layout from "../shared/layout/Layout";
-import '../styles/Modal.css';
 
 export default function App() {
   const { isAuthenticated } = useAuth();

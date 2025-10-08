@@ -3,6 +3,7 @@ import { Provider } from './shared/components/ui/provider';
 import { AuthProvider } from './shared/context/AuthContext';
 import App from './app/App';
 import '../src/styles/Home.css'
+import '../styles/Modal.css';
 
 
 const root = document.getElementById("root");
